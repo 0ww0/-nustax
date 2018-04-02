@@ -1,0 +1,74 @@
+//- Base Color
+
+$white: #ffffff;
+$black: #000000;
+
+//- Theme Color
+
+$primary: #b62025 ;
+$secondary: #333333 ;
+$tertiary: #f2f2f2;
+$quartenary: #fd7176;
+
+
+$link: #2C3E50;
+$linkHover: #22313F;
+
+$button: #b62025;
+$buttonHover: #b62025;
+$submit: #ffffff;
+
+$span: #3B3F42;
+$para: #3B3F42;
+
+//- Other Color
+
+$success:     #1abc9c;
+$successDark: #16a085;
+$info:        #f1c40f;
+$infoDark:    #f39c12;
+$warning:     #e67e22;
+$warningDark: #d35400;
+$disabled:    #ecf0f1;
+$danger:      #e74c3c;
+$danger:      #c0392b;
+$inverse:     #34495e;
+$inverseDark: #2c3e50;
+
+//- Fonts -Placeholder
+
+$sans-serif: 'Open Sans';
+$regular: normal;
+$semi: 600;
+$bold: bold;
+$extra: 800;
+
+$italic: italic;
+
+$min: min-width;
+$max: max-width;
+
+//- Min-width - Potrait
+//- Mobile
+$min-sm: 400px;
+//- Phablet
+$min-ph: 550px;
+//- Tablet
+$min-tb: 750px;
+//- Desktop
+$min-dp: 1000px;
+//- Desktop HD
+$min-dphd: 1200px;
+//- Large desktop
+$min-ldp: 1400px;
+//- Large Desktop Hd
+$min-ldphd: 1600px;
+//- Large Monitor Display
+$min-lmdp: 1800px;
+
+
+//- Max-width - Potrait
+//- Mobile Max-width below 400px
+$max-sm: 320px;
+$max-mm: 360px;
+$max-lm: 375px;

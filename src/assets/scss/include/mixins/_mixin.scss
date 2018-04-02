@@ -1,0 +1,71 @@
+@mixin fontsize($size){
+    .font-#{$size}{
+        font-size: #{$size}px;
+    }
+}
+
+@mixin fontEM($sizePX, $baseSize: 16){
+    font-size: #{$sizePX/$baseSize}em;
+}
+
+@mixin widthPercent($width, $contWidth){
+    width: #{($width/$contWidth)*100%};
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin responsive-ratio($x,$y, $pseudo: true) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+@mixin media-min($media){
+    @if $media == sm {
+        @media($min : $min-sm){ @content; }
+    }
+    @else if $media == ph {
+        @media($min : $min-ph) { @content; }
+    }
+    @else if $media == tb {
+        @media($min : $min-tb) { @content; }
+    }
+    @else if $media == dp {
+        @media($min : $min-dp) { @content; }
+    }
+    @else if $media == dphd {
+        @media($min : $min-dphd) { @content; }
+    }
+    @else if $media == ldp {
+        @media($min : $min-ldp) { @content; }
+    }
+    @else if $media == ldphd {
+        @media($min : $min-ldphd) { @content; }
+    }
+    @else if $media == lmdp {
+        @media($min : $min-lmdp) { @content; }
+    }
+}
+
+@mixin media-max($media){
+    @if $media == sm {
+        @media($max: $max-sm){ @content; }
+    }
+    @else if $media == mm {
+        @media($max: $max-mm){ @content; }
+    }
+    @else if $media == lm {
+        @media($max: $max-lm){ @content; }
+    }
+}

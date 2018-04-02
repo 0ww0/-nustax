@@ -1,0 +1,28 @@
+// Button Styling
+// a.btn Styling
+//- Default button
+//- Primary, Success, Disabled, Error, Warning
+//- Button with icons
+//- Icon button
+//- Compatible with a(href) Tag
+//- Diffrence use case for btn radius
+//-     Default
+//-     Semi round
+//-     Rounded
+button{
+    cursor: pointer;
+}
+
+.btn{
+    background-color: $primary;
+    border: 1px $button solid;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: .4em 2em;
+    transition: color,background-color 0.3s ease;
+    display: inline-block;
+    &:hover, &:active, &:focus{
+        background-color: $buttonHover;
+        color: $white;
+    }
+}

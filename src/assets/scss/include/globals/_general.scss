@@ -1,0 +1,284 @@
+/******************************************************************************
+                            General CSS styling
+                            NOTE: Share/All Styling
+                            Overide Common CSS
+*******************************************************************************/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: $sans-serif;
+    min-height: 100%;
+}
+
+a{
+    color: $link;
+    text-decoration: none;
+    &:hover{
+        color: $linkHover;
+        text-decoration: none;
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-bottom: 15px;
+}
+
+//- bg-hack
+
+.bg-op{
+    background-color: $black;
+    opacity: 0.6;
+}
+
+.sr-only{
+    font-size: 0;
+    display: none;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+
+//- float
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+//- text
+
+.txt-left{
+    text-align: left;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+.txt-right{
+    text-align: right;
+}
+
+.txt-justify{
+    text-align: justify;
+}
+
+.txt-uppercase{
+    text-transform: uppercase;
+}
+
+.txt-lowercase{
+    text-transform: lowercase;
+}
+
+.txt-capitalize{
+    text-transform: capitalize;
+}
+
+.txt-line-throught{
+    text-decoration: line-through;
+}
+
+.txt-overline{
+    text-decoration: overline;
+}
+
+.txt-underline{
+    text-decoration: underline;
+}
+
+.font-italic{
+    font-style: italic;
+}
+
+.font-oblique{
+    font-style: oblique;
+}
+
+.vertical-middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+//font-size
+.font-12{
+    font-size: 10px;
+    @include media-min(dp){
+        font-size: 12px;
+    };
+}
+.font-13{
+    font-size: 12px;
+}
+
+.font-14{
+    font-size: 13px;
+}
+
+.font-15{
+    font-size: 14px;
+}
+
+.font-16{
+    font-size: 15px;
+}
+
+.font-40{
+    font-size: 26px;
+}
+
+.font-45{
+    font-size: 30px;
+}
+@media($min : $min-ph){
+    .font-14{
+        font-size: 15px;
+    }
+
+}
+
+@media($min : $min-tb){
+    .font-12{
+        font-size: 11px;
+    }
+    .font-13{
+        font-size: 12px;
+    }
+
+    .font-14{
+        font-size: 14px;
+    }
+
+    .font-15{
+        font-size: 14px;
+    }
+
+    .font-16{
+        font-size: 15px;
+    }
+
+    .font-40{
+        font-size: 30px;
+    }
+
+    .font-45{
+        font-size: 35px;
+    }
+}
+
+
+@media($min : $min-ldp){
+    @include fontsize(12);
+    @include fontsize(13);
+    @include fontsize(14);
+    @include fontsize(15);
+    @include fontsize(16);
+    @include fontsize(25);
+    @include fontsize(40);
+    @include fontsize(45);
+}
+
+//size: 45px
+.main-heading{
+    font-family: $sans-serif;
+    font-weight: bold;
+    color: $primary;
+    line-height: 1.2;
+}
+
+//size: 15px;
+.heading{
+    font-family: $sans-serif;
+    font-weight: $extra;
+    color: $secondary;
+    line-height: 1;
+}
+
+//size: 16px;
+.para{
+    font-family: $sans-serif;
+    font-weight: $regular;
+    color: $secondary;
+    line-height: 1.8;
+}
+
+.navi{
+    font-family: $sans-serif;
+    font-weight: $regular;
+    color: $secondary;
+    line-height: 1.2;
+}
+
+.list{
+    font-family: $sans-serif;
+    font-weight: $semi;
+    color: $black;
+    line-height: 1.4;
+}
+
+.button{
+    font-family: $sans-serif;
+    font-weight: $semi;
+    color: $white;
+    line-height: 16px;
+}
+
+.vertical{
+    font-family: $sans-serif;
+    font-weight: $regular;
+    color: #c86c6e;
+    line-height: 1.2;
+}
+.vert-holder{
+    @include media-min(dp){
+        position: absolute;
+        right: -11.8em;
+        top: 3em;
+    };
+}
+.dn{
+    display: none;
+    @include media-min(dp){
+        display: block;
+    };
+}
+
+.dl{
+    display: block;
+    text-align: right;
+    @include media-min(dp){
+        display: none;
+    };
+}
+
+
+.vertical-text {
+    @include media-min(dp){
+        transform: rotate(90deg);
+    	transform-origin: left top 0;
+    };
+}

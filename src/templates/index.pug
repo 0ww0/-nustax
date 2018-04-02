@@ -1,0 +1,18 @@
+extends include/defaults
+
+block config
+    - rootBase = ''
+    - title = 'Nustax'
+    - pageClass = 'index'
+    - imgPath = rootBase + 'assets/images/'
+    - cssPath = rootBase + 'assets/css/'
+    - jsPath  = rootBase + 'assets/js/'
+
+block stylesheet
+    link(rel="stylesheet", href= cssPath + 'internals/main.css')
+
+block javascript
+    script(src= jsPath + 'internals/main.js' type='text/javascript')
+    
+block content
+    include include/partial/_index

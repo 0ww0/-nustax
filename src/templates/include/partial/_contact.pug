@@ -1,0 +1,47 @@
+section.contact#contact.clearfix
+    a.back-to-top.js-back-to-top-head(href="#")
+        span.arrow
+        span.sr-only Back To Top
+    .container.cont-16.fluid
+        .row
+            .col-13
+                .content-height
+                    .heading.head-spacing.js-reveal-up
+                        span.font-15.txt-uppercase Contact Us
+                    .main-heading.main-spacing.js-reveal-up
+                        span.font-40.txt-capatilize Fancy a meet up?
+                    .form-container.js-reveal-up
+                        form.contact-us#js-contact-form
+                            .form-group.show-error-wrapper
+                                label(for='contact_name')
+                                input(type='text' name='name' id='contact_name' placeholder='Name')
+                            .form-group.show-error-wrapper
+                                label(for='contact_email')
+                                input(type='email' name='email' id='contact_email' placeholder='Email')
+                            .form-group.show-error-wrapper
+                                label(for='contact_phone')
+                                input(type='tel' name='phone' id='contact_phone' placeholder='Contact No')
+                            .form-group-text.show-error-wrapper
+                                label(for='contact_how_help') 
+                                textarea(placeholder='How can we help?' row='5' id='contact_how_help' name='message')
+                            .form-button
+                                button.button.btn.reset(type='reset' value='reset')
+                                    span.font-13.txt-uppercase Clear
+                            .form-button
+                                button.button.btn.submit(type='submit' value='submit')
+                                    span.font-13.txt-uppercase Submit
+                            .form-success
+                                span.font-14.txt-capatilize Thank you for your submission.
+                    .list.list-spacing.js-reveal-up
+                        span.font-14 or email us at 
+                        a.list.font-14(href='mailto:info@nustax.com.my') info@nustax.com.my
+            .col-3.js-reveal-up
+                .vertical.vertical-text.vert-holder.dn
+                    span.font-12 &copy; 2017 Nustax. All rights reserved.
+        .row
+            .col-2.offset-14
+                .content-height.js-reveal-up
+                    .brand-footer.txt-right
+                        .brand-logo  
+                    .vertical.vertical-text.vert-holder.dl
+                        span.font-12 &copy; 2017 Nustax. All rights reserved.          

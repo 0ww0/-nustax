@@ -1,0 +1,150 @@
+$rootBase: '../';
+$imgPath: 'images/';
+$imgUrl: #{$rootBase}#{$imgPath};
+
+//- 130px
+header{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar{
+    border: 0;
+    .brand-hero{
+        position: relative;
+        width: 100%;
+        padding: 15px 1em;
+        background-color: $white;
+        transition: all 0.5s;
+        &.scrollUp{
+            transform: translateY(-114px);
+        }
+        @include media-min(tb){
+            padding: 2em 5%;
+        }
+    }
+    .brand-fixed{
+        position: fixed;
+        z-index: 5000;
+    }
+    .brand-menu{
+        position: fixed;
+        width: 100%;
+        background-color: $white;
+        height: 0;
+        margin: auto;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        opacity: 0;
+        transition: all 0.2s ease-out;
+        &.open{
+            opacity: 1;
+            height: 100%;
+            transition: height opacity 0.3s ease-in;
+        }
+    }
+}
+
+.brand-hero-holder{
+    float: left;
+    display: block;
+    width: 192px;
+    height: 50px;
+    @include media-max(lm){
+        width: 160px;
+    };
+    @include media-max(sm){
+        width: 135px;
+    };
+    .brand-logo{
+        background-color: transparent;
+        background-image: url(#{$imgUrl}ui/main-logo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 7% 0;
+        width: 85%;
+        @media screen and ($min : 376px) and ($max: 399px){
+            width: 70%;
+        }
+        @include media-min(sm){
+            width: 65%;
+        };
+        @include media-min(tb){
+            @include widthPercent(193,227.05882);
+        };
+        @include media-min(dp){
+            margin: 0;
+            @include widthPercent(193,193);
+        };
+        @include responsive-ratio(193,51);
+    }
+}
+
+.hamburger-holder{
+    float: right;
+    display: block;
+    width: 80px;
+    height: 50px;
+    .hamburger-menu{
+        position: relative;
+        display: inline-block;
+        width: inherit;
+        height: inherit;
+        padding: 15% 0px;
+        .line{
+            width: 40%;
+            height: 3px;
+            background-color: $primary;
+            display: block;
+            margin: 4.5px 0;
+            margin-left: auto;
+            transition: all 0.3s ease-in-out;
+            &:nth-child(3){
+                width: 25%;
+            }
+        }
+        &.open{
+            z-index: 1001;
+            .line:nth-child(3){
+              opacity: 0;
+            }
+            .line:nth-child(1){
+              transform: translateY(18px) rotate(45deg);
+            }
+            .line:nth-child(2){
+              transform: translateY(9px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.open{
+    .menu-list{
+        display: block;
+    }
+}
+
+.menu-list{
+    position: fixed;
+    display: none;
+    width: 64%;
+    height: 60%;
+    margin: auto;
+    top: 18%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+ul.menu{
+    li{
+        margin-bottom: 0;
+        a.nav-menu{
+            padding: 22px 0;
+            display: block;
+        }
+    }
+}
